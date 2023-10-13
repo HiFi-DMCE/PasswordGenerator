@@ -1,31 +1,62 @@
 package com.example.passwordgenerator;
 
+
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Switch;
+import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
+
+    private PasswordGenerator passwordGenerator;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn;
-        btn = findViewById(R.id.btn);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                Toast.makeText(MainActivity.this, "Password Generated Successfully", Toast.LENGTH_SHORT).show();
+        passwordGenerator = new PasswordGenerator();
 
-            Intent iBtn = new Intent (MainActivity.this, PasswordActivity.class);
-            startActivity(iBtn);
-        }
-    });
+        EditText passwordLengthInput = findViewById(R.id.Password_Length);
+        Button generateButton = findViewById(R.id.generate);
+        TextView passwordOutput= findViewById(R.id.newPassword);
+
+        generateButton.setOnClickListener(v -> {
+    @SuppressLint("UseSwitchCompatOrMaterialCode") Switch Lowercase = findViewById(R.id.LowerCase);
+    @SuppressLint("UseSwitchCompatOrMaterialCode") Switch Uppercase = findViewById(R.id.Uppercase);
+    @SuppressLint("UseSwitchCompatOrMaterialCode") Switch Number= findViewById(R.id.Numbers);
+    @SuppressLint("UseSwitchCompatOrMaterialCode") Switch Special = findViewById(R.id.special);
+
+    if( (passwordLengthInput.getText().length()) <= 0) {
+        return;
+    }
+    boolean anyToggleSelected =Lowercase.isChecked() ||
+            Uppercase.isSelected() ||
+            Number.isSelected() ||
+            Special.isSelected();
+
+
+    int passwordLength = Integer.parseInt(String.valueOf(passwordLengthInput.getText()));
+    if(anyToggleSelected){
+        String generatedPassword = passwordGenerator.generatePassword(passwordLength,
+                Uppercase.isSelected() ,
+                Lowercase.isChecked(),
+                Number.isSelected(),
+                Special.isSelected());
+
+        passwordOutput.setText(generatedPassword);}
+
+
+        });
+    }
 }
-}
+
