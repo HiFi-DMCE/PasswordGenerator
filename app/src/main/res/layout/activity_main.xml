@@ -59,12 +59,13 @@
              />-->
 
             <EditText
+                android:id="@+id/Password_Length"
                 android:layout_width="340dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:hint="Enter the length "
                 android:inputType="number"
-                android:layout_marginBottom="10dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp" />
 
           <!--  <SeekBar
                 android:layout_width="match_parent"
@@ -88,12 +89,14 @@
                     android:text="Uppercase"
                     android:textSize="16sp"
                     />
+
                 <Switch
+                    android:id="@+id/Uppercase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="12dp"
-                    android:backgroundTint="@color/ocean"/>
+                    android:backgroundTint="@color/ocean" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -102,11 +105,13 @@
                     android:textSize="16sp"
                    android:layout_marginLeft="35dp"
                     />
+
                 <Switch
+                    android:id="@+id/LowerCase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:backgroundTint="@color/ocean"/>
+                    android:backgroundTint="@color/ocean" />
 
             </LinearLayout>
 
@@ -125,11 +130,13 @@
                     android:text="Numbers"
                     android:textSize="16sp"
                     />
+
                 <Switch
+                    android:id="@+id/Numbers"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
-                    android:backgroundTint="@color/ocean"/>
+                    android:backgroundTint="@color/ocean" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -138,11 +145,13 @@
                     android:textSize="16sp"
                     android:layout_marginLeft="14dp"
                     />
+
                 <Switch
+                    android:id="@+id/special"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:backgroundTint="@color/ocean"/>
+                    android:backgroundTint="@color/ocean" />
 
             </LinearLayout>
             <Button
