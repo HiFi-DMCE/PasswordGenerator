@@ -8,20 +8,20 @@
 
     android:orientation="vertical"
     android:background="#B5E1F6FF">
-   <LinearLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_gravity="left"
-       android:paddingLeft="20dp"
-       android:layout_marginTop="20dp">
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Password Generator"
-           android:textSize="30sp"
-           android:fontFamily="@font/kalamregular"
-           />
-   </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password Generator"
+            android:textSize="30sp"
+            android:fontFamily="@font/kalamregular"
+            />
+    </LinearLayout>
 
 
     <com.airbnb.lottie.LottieAnimationView
@@ -48,34 +48,47 @@
             android:orientation="vertical"
             android:gravity="center"
             android:padding="20dp">
-            <!--<TextView
+
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enter your Choices"
+                android:text="Choose Length"
+                android:textStyle="bold"
                 android:textSize="18sp"
-             />-->
+                />
 
-            <EditText
-                android:layout_width="340dp"
-                android:layout_height="wrap_content"
-                android:hint="Enter the length "
-                android:inputType="number"
-                android:layout_marginBottom="10dp"
-                android:textSize="16sp"/>
-
-          <!--  <SeekBar
+            <SeekBar
+                android:id="@+id/sk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="0dp"
                 android:padding="10dp"
-                android:thumbTint="#0072A0" />-->
+                android:thumbTint="#0072A0" />
 
-           <LinearLayout
+
+            <!-- <EditText
+                 android:id="@+id/et"
+                 android:layout_width="340dp"
+                 android:layout_height="wrap_content"
+                 android:hint="Enter the length "
+                 android:inputType="number"
+                 android:layout_marginBottom="10dp"
+                 android:textSize="16sp"/>-->
+
+            <!--  <SeekBar
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="20dp"
+                  android:padding="10dp"
+                  android:thumbTint="#0072A0" />-->
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:paddingLeft="20dp"
 
                 >
@@ -88,35 +101,36 @@
 
                     />
                 <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/sw1"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_marginLeft="68dp"
-
                     android:backgroundTint="@color/ocean"/>
-           </LinearLayout>
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
 
-            >
+                >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Lowercase"
                     android:textSize="16sp"
-                   android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="20dp"
                     />
                 <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/sw2"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_marginLeft="67dp"
                     android:backgroundTint="@color/ocean"/>
-        </LinearLayout>
+            </LinearLayout>
 
 
 
@@ -125,7 +139,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="0dp"
 
                 android:paddingLeft="20dp"
                 >
@@ -137,32 +151,33 @@
                     android:textSize="16sp"
                     />
                 <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/sw3"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_marginLeft="79dp"
                     android:backgroundTint="@color/ocean"/>
             </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:paddingLeft="20dp"
-            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="20dp"
+                >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Special Character"
                     android:textSize="16sp"
-
                     />
                 <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/sw4"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_marginLeft="20dp"
                     android:backgroundTint="@color/ocean"/>
 
@@ -177,7 +192,7 @@
                 android:textColor="@color/white"
                 android:paddingVertical="10dp"
                 android:layout_marginTop="10dp"/>
-            
+
 
         </LinearLayout>
 
