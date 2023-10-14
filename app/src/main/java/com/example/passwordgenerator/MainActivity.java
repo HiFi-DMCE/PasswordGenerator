@@ -46,18 +46,18 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 boolean anyToggleSelected =Lowercase.isChecked() ||
-                        Uppercase.isSelected() ||
-                        Number.isSelected() ||
-                        Special.isSelected();
+                        Uppercase.isChecked() ||
+                        Number.isChecked() ||
+                        Special.isChecked();
 
 
                 int passwordLength = Integer.parseInt(String.valueOf(passwordLengthInput.getText()));
                 if(anyToggleSelected){
                      passwordGenerator.generatePassword(passwordLength,
-                            Uppercase.isSelected() ,
+                            Uppercase.isChecked() ,
                             Lowercase.isChecked(),
-                            Number.isSelected(),
-                            Special.isSelected());
+                            Number.isChecked(),
+                            Special.isChecked());
 
                 Toast.makeText(MainActivity.this, "Password Generated Successfully", Toast.LENGTH_SHORT).show();
                     Intent iBtn = new Intent (MainActivity.this, PasswordActivity.class);
