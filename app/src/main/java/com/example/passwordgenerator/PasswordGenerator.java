@@ -6,7 +6,7 @@ public class PasswordGenerator {
 
     public static final String LOWERCASE_CHARACTERS = "abcdefghijklmnopqrstuvwxyz";
     public static final String UPPERCASE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    public static final String NUMBERS = "012345679";
+    public static final String NUMBERS = "0123456789";
     public static final String SPECIAL_SYMBOLS = "!@#$%^&*()-_=+[]{};:,.<>/?";
     private final Random random;
     public PasswordGenerator() {
