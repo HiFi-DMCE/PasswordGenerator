@@ -45,7 +45,7 @@ public class PasswordActivity extends AppCompatActivity  {
         }
         TextView passwordOutput;
 
-        passwordOutput = findViewById(Generated_Password); //TODO link generated password in its textview field
+        passwordOutput = findViewById(R.id.generated_Password);
 
         passwordOutput.setText(passwordBuilder.toString());
 
