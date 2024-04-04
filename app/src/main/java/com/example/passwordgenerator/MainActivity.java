@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("tutorial", MODE_PRIVATE);
         boolean isFirstTime = sharedPreferences.getBoolean("isFirstTime", true);
-        isFirstTime=true;
+//        isFirstTime=true;
         if (isFirstTime) {
             showTutorialDialog();
             SharedPreferences.Editor editor = sharedPreferences.edit();
