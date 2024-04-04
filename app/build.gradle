@@ -39,4 +39,6 @@ dependencies {
     def lottieVersion = "6.1.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
 
+    //Tutorial Couch Mark
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.3'
 }
